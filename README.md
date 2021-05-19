@@ -2,10 +2,10 @@
 We will first focus on MNIST.
 
 这是初始的图片。
-![decoded](https://github.com/linhaowei1/Learning-Learning/blob/main/AutoEncoder/pic/decoded.png)
+![real_img](https://github.com/linhaowei1/Attack-Vae/blob/main/checkpoint/pic/real_img_500epoch.png)
 
 这是vae重建的图片。
-![decoded](https://github.com/linhaowei1/Learning-Learning/blob/main/AutoEncoder/pic/decoded.png)
+![recon_img](https://github.com/linhaowei1/Attack-Vae/blob/main/checkpoint/pic/recons_500epoch.png)
 
 ## logs
 - 5.19: Get vanilla vae.
