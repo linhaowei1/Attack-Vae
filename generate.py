@@ -29,7 +29,7 @@ def main():
 
     dataset = torchvision.datasets.MNIST(DATA_PATH, train=False, transform=transform)
     dataloader = torch.utils.data.DataLoader(
-        dataset, batch_size=1, shuffle=True, num_workers=8)
+        dataset, batch_size=1, shuffle=False, num_workers=8)
     
     model = VAE()
     if args.params == 'None':

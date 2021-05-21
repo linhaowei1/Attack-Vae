@@ -5,7 +5,7 @@ We will first focus on MNIST.
 
 左边是real_image，右边是vae重建的图片。
 
-vae训练配置：
+## vae训练
 
 ```python
 batchsize = 144
@@ -13,6 +13,7 @@ epochs = 500
 lr = 1e-4
 optim = Adam
 ```
+训练时长：`2021-05-19 23:37:59.600` 开始， `2021-05-20 00:17:56.000` 结束。
 
 ## VAE-generated Images v.s. Standard Images classifying Accuracy
 
@@ -30,6 +31,12 @@ We evaluate the acc on a pretrained small CNN model.
 | gen-0    | 11.34 |
 
 `gen-epochs` denotes we train the VAE `epochs` iterations and generat pictures using VAE. This could be used as a evaluation for VAE's generation ability.
+
+## Hard images Visualization
+
+Guess what are them? (top: clean example; bottom: generated)
+
+![0](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/0/1.png)![1](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/1/recons_500epoch.png)![1](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/1/1.png)![2](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/2/25.png)![3](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/3/3.png)![4](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/4/27.png)![5](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/5/23.png)![6](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/6/35.png)![7](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/7/16.png)![8](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/8/40.png)![9](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/9/50.png)
 
 ## logs
 - 5.19: Get vanilla vae.

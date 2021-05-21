@@ -5541,3 +5541,63 @@ Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=0, log_file='
 2021-05-21 19:36:24.578 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
 2021-05-21 19:36:25.837 | INFO     | __main__:main:148 - gen acc = 0.1134, gen loss = 2.3298
 2021-05-21 19:36:25.838 | INFO     | __main__:main:150 - test finished
+2021-05-21 20:17:07.446 | INFO     | __main__:main:48 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/checkpoint/model/500epoch_model.pt', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:17:07.446 | INFO     | __main__:main:59 - ==> Preparing data..
+2021-05-21 20:17:07.502 | INFO     | __main__:main:79 - ==> Building model..
+2021-05-21 20:17:54.414 | INFO     | __main__:main:48 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:17:54.415 | INFO     | __main__:main:59 - ==> Preparing data..
+2021-05-21 20:17:54.456 | INFO     | __main__:main:79 - ==> Building model..
+2021-05-21 20:18:29.961 | INFO     | __main__:main:86 - generate finished
+2021-05-21 20:18:57.480 | INFO     | __main__:main:48 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:18:57.480 | INFO     | __main__:main:59 - ==> Preparing data..
+2021-05-21 20:18:57.522 | INFO     | __main__:main:79 - ==> Building model..
+2021-05-21 20:19:14.522 | INFO     | __main__:main:48 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:19:14.522 | INFO     | __main__:main:59 - ==> Preparing data..
+2021-05-21 20:19:14.562 | INFO     | __main__:main:79 - ==> Building model..
+2021-05-21 20:19:51.102 | INFO     | __main__:main:86 - generate finished
+2021-05-21 20:26:41.776 | INFO     | __main__:main:51 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:26:41.776 | INFO     | __main__:main:62 - ==> Preparing data..
+2021-05-21 20:26:41.784 | INFO     | __main__:main:81 - ==> Building model..
+2021-05-21 20:27:02.643 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:27:02.644 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:27:02.651 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:27:49.797 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:27:49.797 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:27:49.805 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:28:14.654 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:28:14.654 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:28:14.661 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:28:39.706 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:28:39.706 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:28:39.716 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:29:12.177 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:29:12.178 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:29:12.188 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:29:48.340 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:29:48.340 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:29:48.347 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:31:36.329 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:31:36.329 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:31:36.337 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:32:33.842 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:32:33.843 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:32:33.850 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:33:16.830 | INFO     | __main__:main:87 - generate finished
+2021-05-21 20:36:43.182 | INFO     | __main__:main:47 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 20:36:43.182 | INFO     | __main__:main:58 - ==> Preparing data..
+2021-05-21 20:36:43.190 | INFO     | __main__:main:77 - ==> Building model..
+2021-05-21 20:37:28.004 | INFO     | __main__:main:87 - generate finished
