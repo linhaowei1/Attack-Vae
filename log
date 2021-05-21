@@ -5443,3 +5443,101 @@ Namespace(batch_size=144, device='cuda:5', epochs=500, log_file='log', lr=0.0001
 2021-05-20 00:17:56.000 | INFO     | __main__:main:146 - model saved to checkpoint/model/last_model.pt
 2021-05-20 00:17:56.000 | INFO     | __main__:main:148 - Epoch 499 ended
 2021-05-20 00:17:56.000 | INFO     | __main__:main:150 - Training finished.
+2021-05-21 17:57:57.137 | INFO     | __main__:main:73 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/checkpoint/model/500epoch_model.pt', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 17:57:57.137 | INFO     | __main__:main:84 - ==> Preparing data..
+2021-05-21 17:57:57.580 | INFO     | __main__:main:104 - ==> Building model..
+2021-05-21 17:58:20.607 | INFO     | __main__:main:73 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 17:58:20.608 | INFO     | __main__:main:84 - ==> Preparing data..
+2021-05-21 17:58:20.689 | INFO     | __main__:main:104 - ==> Building model..
+2021-05-21 17:59:00.917 | INFO     | __main__:main:73 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 17:59:00.917 | INFO     | __main__:main:84 - ==> Preparing data..
+2021-05-21 17:59:00.998 | INFO     | __main__:main:104 - ==> Building model..
+2021-05-21 17:59:08.201 | INFO     | __main__:main:118 - Epoch 0 started
+2021-05-21 17:59:29.195 | INFO     | __main__:main:73 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 17:59:29.196 | INFO     | __main__:main:84 - ==> Preparing data..
+2021-05-21 17:59:29.282 | INFO     | __main__:main:104 - ==> Building model..
+2021-05-21 18:01:11.549 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 18:01:11.550 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 18:01:11.629 | INFO     | __main__:main:102 - ==> Building model..
+2021-05-21 18:01:19.634 | INFO     | __main__:main:140 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 18:06:43.545 | INFO     | __main__:main:72 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 18:06:43.545 | INFO     | __main__:main:83 - ==> Preparing data..
+2021-05-21 18:06:43.629 | INFO     | __main__:main:103 - ==> Building model..
+2021-05-21 18:09:49.690 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 18:09:49.690 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 18:09:59.054 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=500, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 18:09:59.055 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 18:09:59.143 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 18:10:07.697 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 18:10:08.884 | INFO     | __main__:main:148 - gen acc = 0.9407, gen loss = 0.3835
+2021-05-21 18:10:08.884 | INFO     | __main__:main:150 - test finished
+2021-05-21 19:27:11.672 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=50, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/checkpoint/model/50epoch_model.pt', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:27:11.672 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:27:11.773 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:28:10.624 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=50, log_file='log', lr=0.0001, mode='train', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:28:10.624 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:28:10.704 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:28:18.355 | INFO     | __main__:main:121 - Epoch 0 started
+2021-05-21 19:28:23.144 | INFO     | __main__:main:124 - train acc = 0.9983, training loss = 0.0061
+2021-05-21 19:28:24.167 | INFO     | __main__:main:127 - test acc = 0.9952, test loss = 0.0171
+2021-05-21 19:28:24.167 | INFO     | __main__:main:131 - best acc improved to 0.9952
+2021-05-21 19:28:24.172 | INFO     | __main__:main:134 - model saved to checkpoint/model.pt
+2021-05-21 19:28:24.172 | INFO     | __main__:main:138 - Epoch 0 ended, best acc = 0.9952
+2021-05-21 19:28:24.172 | INFO     | __main__:main:121 - Epoch 1 started
+2021-05-21 19:28:38.260 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=50, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:28:38.260 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:28:38.344 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:28:46.944 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 19:32:01.853 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=50, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:32:01.854 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:32:01.932 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:32:10.281 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 19:32:11.390 | INFO     | __main__:main:148 - gen acc = 0.9082, gen loss = 0.4812
+2021-05-21 19:32:11.390 | INFO     | __main__:main:150 - test finished
+2021-05-21 19:32:47.286 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=400, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:32:47.287 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:32:47.389 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:32:55.724 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 19:32:56.845 | INFO     | __main__:main:148 - gen acc = 0.9373, gen loss = 0.3980
+2021-05-21 19:32:56.846 | INFO     | __main__:main:150 - test finished
+2021-05-21 19:33:07.099 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=300, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:33:07.100 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:33:07.182 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:33:15.815 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 19:33:16.988 | INFO     | __main__:main:148 - gen acc = 0.9352, gen loss = 0.4145
+2021-05-21 19:33:16.989 | INFO     | __main__:main:150 - test finished
+2021-05-21 19:33:27.770 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=200, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:33:27.770 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:33:27.855 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:33:36.671 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 19:33:37.807 | INFO     | __main__:main:148 - gen acc = 0.9290, gen loss = 0.4115
+2021-05-21 19:33:37.807 | INFO     | __main__:main:150 - test finished
+2021-05-21 19:33:47.174 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=100, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:33:47.175 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:33:47.254 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:33:55.875 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 19:33:57.039 | INFO     | __main__:main:148 - gen acc = 0.9213, gen loss = 0.4342
+2021-05-21 19:33:57.040 | INFO     | __main__:main:150 - test finished
+2021-05-21 19:36:15.806 | INFO     | __main__:main:71 - args:
+Namespace(batch_size=144, dataset='MNIST', device='cuda:1', epochs=0, log_file='log', lr=0.0001, mode='test', model='smallCNN', params='/home/linhw/myproject/Attack-Vae/MNIST_small_cnn.pth', save_path='checkpoint', seed=1111, weight_decay=0.0005)
+2021-05-21 19:36:15.806 | INFO     | __main__:main:82 - ==> Preparing data..
+2021-05-21 19:36:15.890 | INFO     | __main__:main:107 - ==> Building model..
+2021-05-21 19:36:24.578 | INFO     | __main__:main:145 - test acc = 0.9953, test loss = 0.0152
+2021-05-21 19:36:25.837 | INFO     | __main__:main:148 - gen acc = 0.1134, gen loss = 2.3298
+2021-05-21 19:36:25.838 | INFO     | __main__:main:150 - test finished

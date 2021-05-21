@@ -14,9 +14,22 @@ lr = 1e-4
 optim = Adam
 ```
 
+VAE-generated Images v.s. Standard Images classifying Accuracy
+
+|  data   | accuracy%  |
+|  ----  | ----  |
+| testset  | 99.53 |
+| gen-500  | 94.07 |
+| gen-400  | 93.73 |
+| gen-300  | 93.52 |
+| gen-200  | 92.90 |
+| gen-100  | 92.13 |
+| gen-50   | 90.82 |
+| gen-0    | 11.34 |
 
 ## logs
 - 5.19: Get vanilla vae.
+- 5.21: Exploration : classifier accuracy with VAE generated examples.
 
 ## Tasks
 ### Reproduce
@@ -24,6 +37,7 @@ optim = Adam
 - [ ] latent attack
 - [ ] classifer attack
 - [ ] VAE attack
+
 ### Exploration
 - [ ] untargeted attack
 - [ ] FID/Inception Score/Evaluation protocols
