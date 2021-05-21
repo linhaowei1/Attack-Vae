@@ -36,7 +36,7 @@ We evaluate the acc on a pretrained small CNN model.
 
 Guess what are them? (top: clean example; bottom: generated)
 
-![0](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/0/1.png)![1](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/1/recons_500epoch.png)![1](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/1/1.png)![2](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/2/25.png)![3](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/3/3.png)![4](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/4/27.png)![5](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/5/23.png)![6](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/6/35.png)![7](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/7/16.png)![8](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/8/40.png)![9](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/9/50.png)
+<center>![0](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/0/1.png)![1](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/1/1.png)![2](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/2/25.png)![3](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/3/3.png)![4](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/4/27.png)![5](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/5/23.png)![6](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/6/35.png)![7](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/7/16.png)![8](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/8/40.png)![9](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/9/50.png)</center>
 
 ## logs
 - 5.19: Get vanilla vae.
