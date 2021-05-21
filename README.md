@@ -14,11 +14,13 @@ lr = 1e-4
 optim = Adam
 ```
 
-VAE-generated Images v.s. Standard Images classifying Accuracy
+## VAE-generated Images v.s. Standard Images classifying Accuracy
+
+We evaluate the acc on a pretrained small CNN model.
 
 |  data   | accuracy%  |
 |  ----  | ----  |
-| testset  | 99.53 |
+| standard test set  | 99.53 |
 | gen-500  | 94.07 |
 | gen-400  | 93.73 |
 | gen-300  | 93.52 |
@@ -26,6 +28,8 @@ VAE-generated Images v.s. Standard Images classifying Accuracy
 | gen-100  | 92.13 |
 | gen-50   | 90.82 |
 | gen-0    | 11.34 |
+
+`gen-epochs` denotes we train the VAE `epochs` iterations and generat pictures using VAE. This could be used as a evaluation for VAE's generation ability.
 
 ## logs
 - 5.19: Get vanilla vae.
