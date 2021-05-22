@@ -19,7 +19,7 @@ optim = Adam
 
 We evaluate the acc on a pretrained small CNN model.
 
-|  data   | accuracy%  |
+|  data   | accuracy %  |
 |  ----  | ----  |
 | standard test set  | 99.53 |
 | gen-500  | 94.07 |
@@ -30,7 +30,7 @@ We evaluate the acc on a pretrained small CNN model.
 | gen-50   | 90.82 |
 | gen-0    | 11.34 |
 
-`gen-epochs` denotes we train the VAE `epochs` iterations and generat pictures using VAE. This could be used as a evaluation for VAE's generation ability.
+`gen-epochs` denotes we train the VAE `epochs` iterations and generate pictures using VAE. This could be used as a evaluation for VAE's generation ability.
 
 ## Hard images Visualization
 
@@ -38,9 +38,17 @@ Guess what are them? (top: clean example; bottom: generated)
 
 $\quad\quad\quad\quad\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/0/1.png)![1](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/1/1.png)![2](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/2/25.png)![3](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/3/3.png)![4](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/4/27.png)![5](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/5/23.png)![6](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/6/35.png)![7](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/7/16.png)![8](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/8/40.png)![9](https://github.com/linhaowei1/Attack-Vae/blob/main/hardimgs/9/50.png)
 
+## Latent Attack
+
+The best performing attack on VAEs in the current literature is a latent space attack (Tabacof et al., 2016; Gondim-Ribeiro et al., 2018; Kos et al., 2018), where an adversary perturbs input $x_o$ to have a posterior $q_\phi$ similar to that of the target $x_t$, optimizing
+
+\[\arg\min_{\delta:||\delta||\le c} KL(q_{\phi}(z|x_o+\delta)||q_{\phi}(z|x_t))\]
+
+
 ## logs
 - 5.19: Get vanilla vae.
 - 5.21: Exploration : classifier accuracy with VAE generated examples.
+- 5.22: Try Latent Attack
 
 ## Tasks
 ### Reproduce
