@@ -63,7 +63,7 @@ epsilon = 0.2, stepsize = 1/150, iteration = 30.
 ## logs
 - 5.19: Get vanilla vae.
 - 5.21: Exploration : classifier accuracy with VAE generated examples.
-- 5.22: Try Latent Attack
+- 5.22: Try Latent Attack and untargeted attack. (Today's code is heavy! relax!)
 
 ## Tasks
 ### Reproduce
