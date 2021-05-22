@@ -50,7 +50,16 @@ $$
 
 ![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/3.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/7.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/48.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/25.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/4.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/7.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/12.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/13.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/18.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/22.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/23.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/63.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/21.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/25.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/29.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/33.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/34.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/38.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/41.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/82.png)
 
+注意：攻击的epsilon = 0.3, stepsize = 3/255, iteration = 40.
+## Untargeted Attack
 
+The Untargeted-Attack is rather successful in VAE.
+
+We just maximize the Loss (reconstruction loss + kl divergence loss) using PGD, and get very good results.
+
+epsilon = 0.2, stepsize = 1/150, iteration = 30.
+
+![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/1/39.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/1/58.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/1/91.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/6.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/7.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/3.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/19.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/30.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/38.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/42.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/58.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/22.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/25.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/27.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/50.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/61.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/70.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/79.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/48.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/41.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/30.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/21.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/11.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/5.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/3.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/4.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/19.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/25.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/65.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/3.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/8.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/11.png)
 ## logs
 - 5.19: Get vanilla vae.
 - 5.21: Exploration : classifier accuracy with VAE generated examples.
@@ -64,8 +73,8 @@ $$
 - [ ] VAE attack
 
 ### Exploration
-- [ ] untargeted attack
+- [x] untargeted attack
 - [ ] FID/Inception Score/Evaluation protocols
 - [ ] Transferability
-- [ ] one class attack (based on untargeted attack)
+- [ ] Can attack boost one class detection? (based on untargeted attack)
 
