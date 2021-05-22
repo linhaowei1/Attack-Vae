@@ -46,6 +46,15 @@ $$
 \arg\min_{\delta:||\delta||\le c} KL(q_{\phi}(z|x_o+\delta)||q_{\phi}(z|x_t))
 $$
 
+事实上，VAE是十分鲁棒的（在结构比较简单的情况下），而且这个编码的latent space呈现一定的连续性，有可能我们的攻击只是使得编码类别发生了变化，变成了另外一个类的图片.一些例子如下
+
+![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/3.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/7.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/4.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/48.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/25.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/4.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/7.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/12.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/13.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/18.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/22.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/23.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/63.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/21.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/25.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/29.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/33.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/34.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/38.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/41.png)![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/82.png)
+
+
+
+
+
+
 
 ## logs
 - 5.19: Get vanilla vae.
