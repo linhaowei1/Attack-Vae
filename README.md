@@ -42,7 +42,9 @@ $\quad\quad\quad\quad\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/ma
 
 The best performing attack on VAEs in the current literature is a latent space attack (Tabacof et al., 2016; Gondim-Ribeiro et al., 2018; Kos et al., 2018), where an adversary perturbs input $x_o$ to have a posterior $q_\phi$ similar to that of the target $x_t$, optimizing
 
-\[\arg\min_{\delta:||\delta||\le c} KL(q_{\phi}(z|x_o+\delta)||q_{\phi}(z|x_t))\]
+$$
+\arg\min_{\delta:||\delta||\le c} KL(q_{\phi}(z|x_o+\delta)||q_{\phi}(z|x_t))
+$$
 
 
 ## logs
