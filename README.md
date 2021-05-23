@@ -60,10 +60,19 @@ We just maximize the Loss (reconstruction loss + kl divergence loss) using PGD, 
 epsilon = 0.2, stepsize = 1/150, iteration = 30.
 
 ![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/1/39.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/1/58.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/1/91.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/6.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/7.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/3.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/19.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/30.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/38.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/42.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/58.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/22.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/25.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/27.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/50.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/61.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/70.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/2/79.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/48.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/41.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/30.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/21.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/11.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/0/5.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/3.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/4.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/19.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/25.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/3/65.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/3.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/8.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/untargeted_attack/4/11.png)
+
+## OOD Detection
+
+训了一个6分类器：test acc = 0.9978, partition = 012345。
+softmax 的方法做ood: auc=0.9894368514000416
+[这个是错的，要改一下，vae只能有6类seen数据]训了一个7分类器（persudo class），用vae generated data做负数据，testacc = 0.9978.
+
 ## logs
 - 5.19: Get vanilla vae.
 - 5.21: Exploration : classifier accuracy with VAE generated examples.
 - 5.22: Try Latent Attack and untargeted attack. (Today's code is heavy! relax!)
+- 5.23: Test one class auc on FASION-MNIST, auc = 0.9983925 ... too high! Consider open-set recognition.
+
 
 ## Tasks
 ### Reproduce

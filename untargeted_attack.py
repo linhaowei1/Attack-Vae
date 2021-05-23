@@ -19,7 +19,7 @@ from torch.distributions.multivariate_normal import MultivariateNormal
 import random
 DATA_PATH = '~/data/'
 
-def latent_attack(model, dataloader, device, epsilon=0.2, iters=30, alpha=1/150):
+def untargeted_attack(model, dataloader, device, epsilon=0.2, iters=30, alpha=1/150):
     model.eval()
     target_img = None
     target_img_label = None
@@ -84,7 +84,7 @@ def main():
     model.load_state_dict(torch.load('/home/linhw/myproject/Attack-Vae/checkpoint/model/500epoch_model.pt', map_location=device))
     logger.info("Attack started")
 
-    latent_attack(model, testloader, device)
+    untargeted_attack(model, testloader, device)
 
     logger.info("Attack finished.")
     

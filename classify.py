@@ -62,6 +62,16 @@ def test(model, dataloader, device):
     running_loss = test_loss/len(dataloader)
     return test_acc,running_loss
 
+def my_get_subclass_dataset(dataset, classes):
+    if not isinstance(classes, list):
+        classes = [classes]
+    indices = []
+    for idx, data in enumerate(dataset):
+        if data[1] in classes:
+            indices.append(idx)
+
+    dataset = torch.utils.data.dataset.Subset(dataset, indices)
+    return dataset
 
 def main():
     args = get_args()
@@ -90,25 +100,43 @@ def main():
         raise NotImplementedError
     
     trainset = torchvision.datasets.MNIST(DATA_PATH, train=True, transform=transform)
+    if args.mode == 'ood_train':
+        trainset = my_get_subclass_dataset(trainset, [0,1,2,3,4,5])
+    elif args.mode == 'adv_ood_train':
+        trainset = my_get_subclass_dataset(trainset, [0,1,2,3,4,5])
+        advset = torchvision.datasets.ImageFolder(
+            '/home/linhw/myproject/Attack-Vae/untargeted_generate',
+            transform=transforms.Compose([
+                transforms.Grayscale(num_output_channels=1),
+                transforms.ToTensor()
+            ]),
+        )
+        trainset += advset
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=8)
 
     testset = torchvision.datasets.MNIST(DATA_PATH, train=False, transform=transform)
+    if args.mode == 'ood_train' or args.mode == 'adv_ood_train':
+        testset = my_get_subclass_dataset(testset, [0,1,2,3,4,5])
     testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=8)
     epochs = args.epochs
-    GEN_PATH = f'/home/linhw/myproject/Attack-Vae/gen_imgs-{epochs}'
-    genset = ImageFolder(GEN_PATH, transform=transforms.Compose(
-        [
+    if args.mode == 'test':
+        GEN_PATH = f'/home/linhw/myproject/Attack-Vae/gen_imgs-{epochs}'
+        genset = ImageFolder(GEN_PATH, transform=transforms.Compose([
             transforms.Grayscale(num_output_channels=1),
-            transforms.ToTensor()
-        ]
-    ))
-    genloader = torch.utils.data.DataLoader(genset, batch_size=batch_size, shuffle=False, num_workers=8)
+            transforms.ToTensor()]
+        ))
+        genloader = torch.utils.data.DataLoader(genset, batch_size=batch_size, shuffle=False, num_workers=8)
     # Model
     logger.info('==> Building model..')
     if args.model == 'smallCNN':
         model = SmallCNN()
+        if args.mode == 'ood_train':
+            model.classifier[-1] = nn.Linear(200, 6)
+        elif args.mode == 'adv_ood_train':
+            model.classifier[-1] = nn.Linear(200, 7)
     model = model.to(device)
-    model.load_state_dict(torch.load(args.params, map_location=device)['state_dict'])
+    if args.mode == 'test':
+        model.load_state_dict(torch.load(args.params, map_location=device)['state_dict'])
 
     optimizer = optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     
@@ -116,7 +144,7 @@ def main():
         scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.7)
     
     best_acc = 0
-    if args.mode == 'train':
+    if args.mode == 'train' or args.mode == 'ood_train' or args.mode == 'adv_ood_train':
         for epoch in range(args.epochs):
             logger.info("Epoch {} started".format(epoch))
 
@@ -130,7 +158,7 @@ def main():
                 best_acc = test_acc
                 logger.info("best acc improved to {:.4f}".format(best_acc))
                 model_to_save = model.module if hasattr(model, 'module') else model
-                torch.save(model_to_save.state_dict(), '{}/model.pt'.format(output_dir))
+                torch.save(model_to_save.state_dict(), '{}/{}model.pt'.format(output_dir))
                 logger.info("model saved to {}/model.pt".format(output_dir))
 
             scheduler.step()
