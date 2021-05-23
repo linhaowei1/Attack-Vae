@@ -64,8 +64,12 @@ epsilon = 0.2, stepsize = 1/150, iteration = 30.
 ## OOD Detection
 
 训了一个6分类器：test acc = 0.9978, partition = 012345。
+
 softmax 的方法做ood: auc=0.9894368514000416
-[这个是错的，要改一下，vae只能有6类seen数据]训了一个7分类器（persudo class），用vae generated data做负数据，testacc = 0.9978.
+
+[这个是错的，要改一下，vae只能有6类seen数据]
+
+训了一个7分类器（persudo class），用vae generated data做负数据，testacc = 0.9978.
 
 ## logs
 - 5.19: Get vanilla vae.
