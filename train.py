@@ -8,6 +8,7 @@ import torch.backends.cudnn as cudnn
 import torchvision.utils as vutils
 import math
 import os
+from datasets import get_dataset
 from loguru import logger
 import torchvision
 import torchvision.transforms as transforms
@@ -115,12 +116,9 @@ def main():
     transform = transforms.Compose([
         transforms.ToTensor(),
     ])
-
-    trainset = torchvision.datasets.MNIST(DATA_PATH, train=True, transform=transform)
+    trainset, testset = get_dataset('MNIST_id', download=False, seen=args.seen, train=False)
     trainloader = torch.utils.data.DataLoader(
         trainset, batch_size=batch_size, shuffle=True, num_workers=8)
-
-    testset = torchvision.datasets.MNIST(DATA_PATH, train=False, transform=transform)
     testloader = torch.utils.data.DataLoader(
         testset, batch_size=batch_size, shuffle=True, num_workers=8)
     # Model
@@ -139,11 +137,11 @@ def main():
             val_loss, recon_loss, kld_loss = val(model, optimizer, testloader, device)
             logger.info("val loss = {:.4f}, reconstruction loss = {:.4f}, kld loss = {:.4f}".format(val_loss, recon_loss, kld_loss))
 
-        if (epoch+1) % 50 == 0:
+        if (epoch+1) % 20 == 0:
             sample_images(epoch, model, testloader, device, output_dir)
             model_to_save = model.module if hasattr(model, 'module') else model
-            torch.save(model_to_save.state_dict(), '{}/model/{}epoch_model.pt'.format(output_dir, epoch+1))
-            logger.info("model saved to {}/model/last_model.pt".format(output_dir))
+            torch.save(model_to_save.state_dict(), '{}/model/{}epoch_model_seen{}.pt'.format(output_dir, epoch+1, args.seen))
+            logger.info("model saved to {}/model/last_model_seen{}.pt".format(output_dir, args.seen))
 
         logger.info("Epoch {} ended".format(epoch))
 

@@ -103,20 +103,21 @@ def main():
     if args.mode == 'ood_train':
         trainset = my_get_subclass_dataset(trainset, [0,1,2,3,4,5])
     elif args.mode == 'adv_ood_train':
-        trainset = my_get_subclass_dataset(trainset, [0,1,2,3,4,5])
+        trainset = my_get_subclass_dataset(trainset, [0,1,2,3,4,5,6,7,8,9])
         advset = torchvision.datasets.ImageFolder(
             '/home/linhw/myproject/Attack-Vae/untargeted_generate',
             transform=transforms.Compose([
                 transforms.Grayscale(num_output_channels=1),
                 transforms.ToTensor()
             ]),
+            target_transform=lambda x: 10
         )
         trainset += advset
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=8)
 
     testset = torchvision.datasets.MNIST(DATA_PATH, train=False, transform=transform)
     if args.mode == 'ood_train' or args.mode == 'adv_ood_train':
-        testset = my_get_subclass_dataset(testset, [0,1,2,3,4,5])
+        testset = my_get_subclass_dataset(testset, [0,1,2,3,4,5,6,7,8,9])
     testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=8)
     epochs = args.epochs
     if args.mode == 'test':
@@ -133,7 +134,7 @@ def main():
         if args.mode == 'ood_train':
             model.classifier[-1] = nn.Linear(200, 6)
         elif args.mode == 'adv_ood_train':
-            model.classifier[-1] = nn.Linear(200, 7)
+            model.classifier[-1] = nn.Linear(200, 11)
     model = model.to(device)
     if args.mode == 'test':
         model.load_state_dict(torch.load(args.params, map_location=device)['state_dict'])
@@ -158,7 +159,7 @@ def main():
                 best_acc = test_acc
                 logger.info("best acc improved to {:.4f}".format(best_acc))
                 model_to_save = model.module if hasattr(model, 'module') else model
-                torch.save(model_to_save.state_dict(), '{}/{}model.pt'.format(output_dir))
+                torch.save(model_to_save.state_dict(), '{}/{}model.pt'.format(output_dir, args.seen))
                 logger.info("model saved to {}/model.pt".format(output_dir))
 
             scheduler.step()

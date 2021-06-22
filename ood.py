@@ -29,9 +29,11 @@ def ood_detect(model, dataloader, device, args):
             label += targets.cpu().numpy().tolist()
             outputs = F.softmax(model(inputs), dim=1)
             _score, _ = outputs.max(1)
-            
+
             if args.mode == 'adv_openset':
-                _score = 1-outputs[:,6]
+                _score = _score-outputs[:,6]
+            elif args.mode == 'adv_datasets':
+                _score = -outputs[:,10]
 
             score += _score.cpu().numpy().tolist()
     return score,label
@@ -76,6 +78,9 @@ def main():
         testset = my_get_subclass_dataset(testset, [0,1,2,3,4,5])
         oodset = torchvision.datasets.MNIST(DATA_PATH, train=False, transform=transform)
         oodset = my_get_subclass_dataset(oodset, [6,7,8,9])
+    elif args.mode == 'adv_datasets':
+        testset = torchvision.datasets.MNIST(DATA_PATH, train=False, transform=transform, target_transform= lambda x : 0)    
+        oodset = torchvision.datasets.FashionMNIST(DATA_PATH, train=False, transform=transform, target_transform= lambda x:1)
     else:
         testset = torchvision.datasets.MNIST(DATA_PATH, train=False, transform=transform, target_transform= lambda x : 0)    
         oodset = torchvision.datasets.FashionMNIST(DATA_PATH, train=False, transform=transform, target_transform= lambda x:1)
@@ -90,12 +95,16 @@ def main():
     elif args.mode == 'adv_openset':
         model.classifier[-1] = nn.Linear(200, 7)
         model.load_state_dict(torch.load('/home/linhw/myproject/Attack-Vae/checkpoint/012345_adv_ood_model.pt', map_location=device))
+    elif args.mode == 'adv_datasets':
+        model.classifier[-1] = nn.Linear(200, 11)
+        model.load_state_dict(torch.load('/home/linhw/myproject/Attack-Vae/checkpoint/123456789model.pt', map_location=device))    
     else:
         model.load_state_dict(torch.load('MNIST_small_cnn.pth', map_location=device)['state_dict'])
     model = model.to(device)
     score, label = ood_detect(model, testloader, device, args)
-    if args.mode == 'openset' or 'adv_openset':
+    if args.mode == 'openset' or args.mode == 'adv_openset':
         label = [la >= 6 for la in label]
+
     fpr, tpr, thresholds = metrics.roc_curve(label, score, pos_label=0)
     auc = metrics.auc(fpr, tpr)
     

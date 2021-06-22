@@ -24,5 +24,6 @@ def get_args():
                         help='load pretrained model')
     parser.add_argument('--weight_decay', '-w', default=5e-4, type=float, help='weight_decay')
     parser.add_argument('--model', default='smallCNN',type=str, required=False, help='Model Type')
+    parser.add_argument('--seen', default='012345',type=str, required=False, help='seen classes')
 
     return parser.parse_args()

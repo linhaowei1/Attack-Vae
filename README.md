@@ -76,7 +76,7 @@ softmax 的方法做ood: auc=0.9894368514000416
 - 5.21: Exploration : classifier accuracy with VAE generated examples.
 - 5.22: Try Latent Attack and untargeted attack. (Today's code is heavy! relax!)
 - 5.23: Test one class auc on FASION-MNIST, auc = 0.9983925 ... too high! Consider open-set recognition.
-
+- 5.24: Using fake images to test one class auc. fMNIST and MNIST is 0.9979200500000001.
 
 ## Tasks
 ### Reproduce
