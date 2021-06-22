@@ -51,7 +51,12 @@ $$
 ![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/3.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/7.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/48.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/9/25.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/4.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/7.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/12.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/13.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/18.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/22.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/23.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/5/63.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/21.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/25.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/29.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/33.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/34.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/38.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/41.png)$\quad$![0](https://github.com/linhaowei1/Attack-Vae/blob/main/latent_attack/1/82.png)
 
 注意：攻击的epsilon = 0.3, stepsize = 3/255, iteration = 40.
+
+Other Targeted Attack like CA, VA are implemented. The results can be seen in Presentation.
+
 ## Untargeted Attack
+
+For untargeted Attack, UCA-v1, UCA-v2, UVA are implemented.
 
 The Untargeted-Attack is rather successful in VAE.
 
@@ -63,31 +68,4 @@ epsilon = 0.2, stepsize = 1/150, iteration = 30.
 
 ## OOD Detection
 
-训了一个6分类器：test acc = 0.9978, partition = 012345。
-
-softmax 的方法做ood: auc=0.9894368514000416
-
-[这个是错的，要改一下，vae只能有6类seen数据]
-
-训了一个7分类器（persudo class），用vae generated data做负数据，testacc = 0.9978.
-
-## logs
-- 5.19: Get vanilla vae.
-- 5.21: Exploration : classifier accuracy with VAE generated examples.
-- 5.22: Try Latent Attack and untargeted attack. (Today's code is heavy! relax!)
-- 5.23: Test one class auc on FASION-MNIST, auc = 0.9983925 ... too high! Consider open-set recognition.
-- 5.24: Using fake images to test one class auc. fMNIST and MNIST is 0.9979200500000001.
-
-## Tasks
-### Reproduce
-- [x] vanilla vae
-- [x] latent attack
-- [ ] classifer attack
-- [ ] VAE attack
-
-### Exploration
-- [x] untargeted attack
-- [ ] FID/Inception Score/Evaluation protocols
-- [ ] Transferability
-- [ ] Can attack boost one class detection? (based on untargeted attack)
-
+run `attackood/runner.py` for expriments.
